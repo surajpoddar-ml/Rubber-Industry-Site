@@ -19,7 +19,7 @@ export const products = [
     suitableTerrain: ['Paved city roads', 'Highway surfaces', 'Mixed urban terrain'],
     sizes: ['2.75-17', '2.75-18', '3.00-17', '3.00-18', '90/90-17', '100/90-17'],
     warranty: '2-year manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=600&q=80',
+    image: '/images/tyres/tyre-moto-street.jpg',
   },
   {
     id: 'ht-moto-trail',
@@ -32,7 +32,7 @@ export const products = [
     suitableTerrain: ['Gravel roads', 'Rural trails', 'Mixed on/off road', 'Hill tracks'],
     sizes: ['2.75-21', '3.00-21', '4.10-18', '110/80-18', '120/80-18'],
     warranty: '2-year manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?w=600&q=80',
+    image: '/images/tyres/tyre-offroad-moto.jpg',
   },
   {
     id: 'ht-moto-heavy',
@@ -45,7 +45,7 @@ export const products = [
     suitableTerrain: ['Urban roads under load', 'Highway', 'Mixed terrain with cargo'],
     sizes: ['3.00-17', '3.00-18', '3.25-18', '3.50-18', '100/90-17 Reinforced'],
     warranty: '2-year manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1449426468159-d96dbf08f19f?w=600&q=80',
+    image: '/images/tyres/tyre-moto-street.jpg',
   },
 
   // ── 4-Wheeler ──────────────────────────────────────────────
@@ -60,7 +60,7 @@ export const products = [
     suitableTerrain: ['Highway', 'Urban roads', 'Gravel roads', 'Light off-road', 'Mixed terrain'],
     sizes: ['215/75R15', '225/75R15', '235/70R16', '245/70R16', '265/70R16', '265/65R17'],
     warranty: '3-year / 50,000 km manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=600&q=80',
+    image: '/images/tyres/tyre-allterrain.jpg',
   },
   {
     id: 'ht-passenger-comfort',
@@ -73,7 +73,7 @@ export const products = [
     suitableTerrain: ['City roads', 'Highway', 'Paved surfaces'],
     sizes: ['165/80R14', '175/70R14', '185/65R15', '195/65R15', '205/55R16', '215/55R16'],
     warranty: '3-year / 50,000 km manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=600&q=80',
+    image: '/images/tyres/tyre-passenger-car.jpg',
   },
   {
     id: 'ht-commercial-van',
@@ -86,7 +86,7 @@ export const products = [
     suitableTerrain: ['Highway', 'Urban commercial routes', 'Mixed surfaces', 'Loading areas'],
     sizes: ['185R14C', '195R15C', '215/75R15C', '225/75R16C', '7.00R16', '7.50R16'],
     warranty: '3-year manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=600&q=80',
+    image: '/images/tyres/tyre-commercial-truck.jpg',
   },
 
   // ── Adventure / Mixed Terrain ──────────────────────────────
@@ -101,7 +101,7 @@ export const products = [
     suitableTerrain: ['Highway', 'Mountain passes', 'Gravel roads', 'Rocky trails', 'River crossings'],
     sizes: ['90/90-21', '110/80-19', '120/70-19', '130/80-17', '140/80-17', '150/70-17'],
     warranty: '2-year manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1502489597346-dad15683d4c2?w=600&q=80',
+    image: '/images/tyres/tyre-offroad-moto.jpg',
   },
   {
     id: 'ht-crossover-mx',
@@ -114,7 +114,7 @@ export const products = [
     suitableTerrain: ['Paved roads', 'Unpaved rural roads', 'Wet surfaces', 'Light gravel'],
     sizes: ['205/70R15', '215/65R16', '225/65R17', '235/60R18'],
     warranty: '3-year / 50,000 km manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1519641471654-76ce0107ad1b?w=600&q=80',
+    image: '/images/tyres/tyre-allterrain.jpg',
   },
 
   // ── Mountain Applications ──────────────────────────────────
@@ -129,7 +129,7 @@ export const products = [
     suitableTerrain: ['Mountain highways', 'Steep gradients', 'Hairpin roads', 'High-altitude routes', 'Wet mountain roads'],
     sizes: ['7.50R16', '8.25R16', '9.00R20', '10.00R20', '11.00R20', '12.00R20'],
     warranty: '3-year manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=600&q=80',
+    image: '/images/tyres/tyre-commercial-truck.jpg',
   },
   {
     id: 'ht-mountain-grip',
@@ -142,7 +142,7 @@ export const products = [
     suitableTerrain: ['Mud', 'Rocky terrain', 'Construction sites', 'Mountain tracks', 'Extreme off-road'],
     sizes: ['7.50R16', '9.00R20', '10.00R20', '11.00R20', '12.00R20', '14.00R20'],
     warranty: '2-year manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=600&q=80',
+    image: '/images/tyres/tyre-allterrain.jpg',
   },
   {
     id: 'ht-mountain-bus',
@@ -155,6 +155,6 @@ export const products = [
     suitableTerrain: ['Mountain highways', 'Hill routes', 'Urban-to-mountain transit', 'Wet mountain roads'],
     sizes: ['8.25R16', '9.00R20', '10.00R20', '11R22.5', '12R22.5', '295/80R22.5'],
     warranty: '3-year manufacturer warranty',
-    image: 'https://images.unsplash.com/photo-1570125909232-eb263c188f7e?w=600&q=80',
+    image: '/images/tyres/tyre-commercial-truck.jpg',
   },
 ];

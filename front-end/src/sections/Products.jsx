@@ -38,19 +38,19 @@ export default function Products() {
           {[
             {
               label: '2-Wheeler',
-              img: 'https://images.unsplash.com/photo-1558981806-ec527fa84c39?w=400&q=80',
+              img: '/images/tyres/tyre-moto-street.jpg',
             },
             {
               label: '4-Wheeler',
-              img: 'https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?w=400&q=80',
+              img: '/images/tyres/tyre-passenger-car.jpg',
             },
             {
               label: 'Adventure',
-              img: 'https://images.unsplash.com/photo-1502489597346-dad15683d4c2?w=400&q=80',
+              img: '/images/tyres/tyre-offroad-moto.jpg',
             },
             {
               label: 'Mountain',
-              img: 'https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?w=400&q=80',
+              img: '/images/tyres/tyre-allterrain.jpg',
             },
           ].map((cat) => (
             <div
