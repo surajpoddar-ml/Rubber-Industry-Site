@@ -46,20 +46,14 @@ export default function About() {
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-extrabold text-charcoal-900 leading-tight mb-8">
               About Us
             </h2>
-            <p className="text-lg sm:text-xl text-charcoal-800 font-semibold leading-relaxed mb-6">
+            <p className="text-lg sm:text-xl text-charcoal-800 font-semibold leading-relaxed mb-8">
               Nepal Rubber Tech Industries (NRT) is a Nepalese tyre and tube
-              manufacturer focused on delivering dependable mobility solutions
-              for the businesses and communities that keep Nepal moving. From
-              transport and logistics to construction, agriculture and industrial
-              fleets, NRT serves customers whose operations depend on
-              performance, safety and continuity.
-            </p>
-            <p className="text-base sm:text-lg text-charcoal-700 font-medium leading-relaxed mb-8">
-              As part of its transformation, NRT is building a new generation of
-              products and customer experiences around technical performance,
-              accountable service and value over the total life of the tyre. Our
-              proposed <strong className="text-forest-700 font-bold">HIMALAYAN TYRES</strong> range
-              extends this commitment into demanding mountain and mixed-road
+              manufacturer delivering dependable mobility solutions for transport,
+              logistics, construction, agriculture and industrial fleets. NRT is
+              transforming its products and customer experience around technical
+              performance, accountable service, safety and long-term value. Its
+              <strong className="text-forest-700 font-bold"> HIMALAYAN TYRES </strong>
+              range brings this commitment to demanding mountain and mixed-road
               applications, combining local understanding with performance-led
               product development.
             </p>
