@@ -88,7 +88,7 @@ export default function Navbar() {
       aria-label="Main navigation"
     >
       <div className="container-max section-padding">
-        <div className="flex items-center justify-between h-16 lg:h-[72px]">
+        <div className="flex items-center justify-between h-20 lg:h-24">
           {/* Logo */}
           <a
             href="#home"
@@ -99,7 +99,7 @@ export default function Navbar() {
             <img
               src="/logo.png"
               alt="Nepal Rubber Tech"
-              className="h-10 lg:h-12 w-auto"
+              className="h-[4.5rem] lg:h-[5.4rem] w-auto"
             />
           </a>
 
