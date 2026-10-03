@@ -71,7 +71,9 @@ export default function Footer() {
           {/* Company */}
           <div className="sm:col-span-2 lg:col-span-1">
             <a href="#home" onClick={(e) => scrollTo(e, '#home')} className="inline-block mb-4">
-              <img src="/logo.png" alt="Nepal Rubber Tech" className="h-12 w-auto brightness-0 invert" />
+              <div className="bg-white px-3 py-1.5 rounded-lg inline-block shadow-sm">
+                <img src="/logo.png" alt="Nepal Rubber Tech" className="h-10 w-auto" />
+              </div>
             </a>
             <p className="text-sm leading-relaxed text-charcoal-400 mb-6 max-w-xs">
               Professional rubber manufacturing company based in Nepal, delivering

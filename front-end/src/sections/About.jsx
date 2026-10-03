@@ -31,10 +31,9 @@ export default function About() {
           >
             <div className="aspect-[4/3] rounded-2xl overflow-hidden bg-charcoal-200">
               <img
-                src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80"
-                alt="Tyre manufacturing and production"
+                src="/images/about-factory.jpg"
+                alt="Nepal Rubber Tech Tyre Manufacturing Facility"
                 className="w-full h-full object-cover"
-                loading="lazy"
               />
             </div>
             {/* Accent block */}

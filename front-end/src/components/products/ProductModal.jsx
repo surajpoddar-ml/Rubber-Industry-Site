@@ -1,22 +1,50 @@
 import Modal from '../common/Modal';
 import Button from '../common/Button';
-import { ArrowRight, CheckCircle2, Wrench, Beaker, Settings, Layers } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Wrench, Mountain, Shield, Ruler, Tag } from 'lucide-react';
 
 export default function ProductModal({ product, isOpen, onClose }) {
   if (!product) return null;
 
+  const categoryLabel =
+    product.category === '2-wheeler'
+      ? '2-Wheeler'
+      : product.category === '4-wheeler'
+      ? '4-Wheeler'
+      : product.category === 'adventure'
+      ? 'Adventure / Mixed Terrain'
+      : 'Mountain Applications';
+
   return (
     <Modal isOpen={isOpen} onClose={onClose} title={product.name} size="lg">
       <div className="space-y-6">
-        {/* Image placeholder */}
-        <div className="h-56 bg-gradient-to-br from-charcoal-100 to-charcoal-200 rounded-xl flex items-center justify-center">
-          <Layers size={64} className="text-charcoal-300" />
+        {/* Product image */}
+        <div className="h-64 rounded-xl overflow-hidden">
+          <img
+            src={product.image}
+            alt={product.name}
+            className="w-full h-full object-cover"
+          />
         </div>
 
-        {/* Category */}
-        <span className="inline-block bg-forest-50 text-forest-700 text-sm font-semibold px-3 py-1 rounded-full">
-          {product.category}
-        </span>
+        {/* Category & warranty */}
+        <div className="flex flex-wrap gap-3">
+          <span className="bg-rust-50 text-rust-700 text-sm font-semibold px-3 py-1 rounded-full">
+            {categoryLabel}
+          </span>
+          <span className="bg-forest-50 text-forest-700 text-sm font-semibold px-3 py-1 rounded-full flex items-center gap-1.5">
+            <Shield size={14} />
+            {product.warranty}
+          </span>
+        </div>
+
+        {/* Application */}
+        <div>
+          <h4 className="font-display text-lg font-bold text-charcoal-900 mb-2 flex items-center gap-2">
+            <Tag size={18} className="text-rust-600" />
+            Application
+          </h4>
+          <p className="text-charcoal-600 leading-relaxed">{product.application}</p>
+        </div>
 
         {/* Description */}
         <div>
@@ -24,60 +52,59 @@ export default function ProductModal({ product, isOpen, onClose }) {
           <p className="text-charcoal-600 leading-relaxed">{product.description}</p>
         </div>
 
-        {/* Applications */}
+        {/* Key Features */}
         <div>
           <h4 className="font-display text-lg font-bold text-charcoal-900 mb-3 flex items-center gap-2">
             <Wrench size={18} className="text-forest-600" />
-            Applications
+            Key Features
           </h4>
           <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-            {product.applications.map((app) => (
-              <li key={app} className="flex items-start gap-2 text-sm text-charcoal-600">
+            {product.keyFeatures.map((feat) => (
+              <li key={feat} className="flex items-start gap-2 text-sm text-charcoal-600">
                 <CheckCircle2 size={16} className="text-forest-500 mt-0.5 shrink-0" />
-                {app}
+                {feat}
               </li>
             ))}
           </ul>
         </div>
 
-        {/* Materials */}
+        {/* Suitable Terrain */}
         <div>
           <h4 className="font-display text-lg font-bold text-charcoal-900 mb-3 flex items-center gap-2">
-            <Beaker size={18} className="text-forest-600" />
-            Material Information
+            <Mountain size={18} className="text-forest-600" />
+            Suitable Terrain
           </h4>
-          <ul className="space-y-1.5">
-            {product.materials.map((mat) => (
-              <li key={mat} className="flex items-start gap-2 text-sm text-charcoal-600">
-                <span className="w-1.5 h-1.5 rounded-full bg-forest-500 mt-1.5 shrink-0" />
-                {mat}
-              </li>
+          <div className="flex flex-wrap gap-2">
+            {product.suitableTerrain.map((terrain) => (
+              <span
+                key={terrain}
+                className="bg-forest-50 text-forest-700 text-sm px-3 py-1 rounded-full"
+              >
+                {terrain}
+              </span>
             ))}
-          </ul>
+          </div>
         </div>
 
-        {/* Available Options */}
-        <div>
-          <h4 className="font-display text-lg font-bold text-charcoal-900 mb-3 flex items-center gap-2">
-            <Settings size={18} className="text-forest-600" />
-            Available Options
-          </h4>
-          <ul className="space-y-1.5">
-            {product.availableOptions.map((opt) => (
-              <li key={opt} className="flex items-start gap-2 text-sm text-charcoal-600">
-                <span className="w-1.5 h-1.5 rounded-full bg-rust-500 mt-1.5 shrink-0" />
-                {opt}
-              </li>
-            ))}
-          </ul>
-        </div>
-
-        {/* Technical Info */}
+        {/* Available Sizes */}
         <div className="bg-charcoal-50 rounded-xl p-5">
-          <h4 className="font-display text-lg font-bold text-charcoal-900 mb-2">
-            Technical Information
+          <h4 className="font-display text-lg font-bold text-charcoal-900 mb-3 flex items-center gap-2">
+            <Ruler size={18} className="text-forest-600" />
+            Available Sizes / Specifications
           </h4>
-          <p className="text-sm text-charcoal-600 leading-relaxed">{product.technicalInfo}</p>
+          <div className="flex flex-wrap gap-2">
+            {product.sizes.map((size) => (
+              <span
+                key={size}
+                className="bg-white border border-charcoal-200 text-charcoal-700 text-sm font-mono px-3 py-1.5 rounded-lg"
+              >
+                {size}
+              </span>
+            ))}
+          </div>
+          <p className="text-xs text-charcoal-400 mt-3">
+            * Demo specifications — replace with actual product sizes when available.
+          </p>
         </div>
 
         {/* CTA */}
@@ -93,7 +120,7 @@ export default function ProductModal({ product, isOpen, onClose }) {
               }, 300);
             }}
           >
-            Request Quote
+            Request Quote for This Tyre
           </Button>
           <Button variant="outline" onClick={onClose}>
             Close
