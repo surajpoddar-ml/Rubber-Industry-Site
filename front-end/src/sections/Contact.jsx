@@ -140,21 +140,24 @@ export default function Contact() {
             </div>
           </motion.div>
 
-          {/* Map Placeholder */}
+          {/* Real Google Map Navigation */}
           <motion.div
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <div className="h-full min-h-[400px] bg-charcoal-200 rounded-2xl overflow-hidden flex items-center justify-center relative">
-              <div className="text-center p-8">
-                <MapPin size={48} className="text-charcoal-400 mx-auto mb-4" />
-                <p className="text-charcoal-500 font-medium mb-2">Map Placeholder</p>
-                <p className="text-sm text-charcoal-400">
-                  Replace with an embedded Google Map or interactive map component.
-                </p>
-              </div>
+            <div className="h-full min-h-[400px] bg-charcoal-200 rounded-2xl overflow-hidden shadow-md border border-charcoal-200 relative">
+              <iframe
+                title="Nepal Rubber Tech Location Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.857353982464!2d85.31232925!3d27.70896035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1565540167!2sKathmandu%2044600%2C%20Nepal!5e0!2m3!1m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
+                width="100%"
+                height="100%"
+                style={{ border: 0, minHeight: '400px' }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              />
             </div>
           </motion.div>
         </div>

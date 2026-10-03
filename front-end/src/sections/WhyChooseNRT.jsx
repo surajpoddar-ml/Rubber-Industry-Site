@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import { Mountain, Gauge, Truck, Headphones, Factory, ShieldCheck } from 'lucide-react';
-import SectionHeader from '../components/common/SectionHeader';
 
 const features = [
   {
@@ -43,48 +42,42 @@ const features = [
 
 export default function WhyChooseNRT() {
   return (
-    <section className="py-20 lg:py-28 bg-charcoal-50/50" aria-label="Why Choose NRT">
+    <section className="py-10 lg:py-14 bg-charcoal-50/50" aria-label="Why Choose NRT">
       <div className="container-max section-padding">
-        <SectionHeader
-          eyebrow="Why Choose NRT"
-          title="Why Choose NRT?"
-          description="At NRT, we believe a tyre should be designed for the road it actually travels on. Through HIMALAYAN TYRES, we are building application-focused solutions for mountain and mixed-road environments."
-        />
+        <div className="text-center max-w-2xl mx-auto mb-8">
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-charcoal-900 leading-tight">
+            Why Choose NRT?
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {features.map((feature, i) => {
             const Icon = feature.icon;
             return (
               <motion.div
                 key={feature.title}
-                className="group relative bg-white p-8 rounded-2xl border border-charcoal-100 hover:border-forest-300 shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col justify-between"
-                initial={{ opacity: 0, y: 30 }}
+                className="group relative bg-white p-5 rounded-xl border border-charcoal-100 hover:border-forest-300 shadow-xs hover:shadow-md transition-all duration-300 flex flex-col justify-between"
+                initial={{ opacity: 0, y: 15 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: '-30px' }}
-                transition={{ duration: 0.5, delay: i * 0.08 }}
+                viewport={{ once: true, margin: '-20px' }}
+                transition={{ duration: 0.4, delay: i * 0.05 }}
               >
                 <div>
-                  {/* Top row: Icon + Badge number */}
-                  <div className="flex items-center justify-between mb-6">
-                    <div className={`w-14 h-14 rounded-xl border flex items-center justify-center transition-transform duration-300 group-hover:scale-110 ${feature.color}`}>
-                      <Icon size={28} />
+                  <div className="flex items-center justify-between mb-3">
+                    <div className={`w-11 h-11 rounded-lg border flex items-center justify-center transition-transform duration-300 group-hover:scale-105 ${feature.color}`}>
+                      <Icon size={22} />
                     </div>
-                    <span className="text-xs font-bold font-mono text-charcoal-400 bg-charcoal-100 px-2.5 py-1 rounded-full">
+                    <span className="text-xs font-bold font-mono text-charcoal-400 bg-charcoal-100 px-2 py-0.5 rounded-full">
                       {String(i + 1).padStart(2, '0')}
                     </span>
                   </div>
 
-                  <h3 className="font-display text-xl font-bold text-charcoal-900 mb-3 group-hover:text-forest-700 transition-colors">
+                  <h3 className="font-display text-lg font-bold text-charcoal-900 mb-1.5 group-hover:text-forest-700 transition-colors">
                     {feature.title}
                   </h3>
-                  <p className="text-sm text-charcoal-600 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-charcoal-600 leading-relaxed">
                     {feature.description}
                   </p>
-                </div>
-
-                <div className="mt-6 pt-4 border-t border-charcoal-50 flex items-center text-xs font-semibold text-forest-600 group-hover:text-rust-600 transition-colors">
-                  <span>NRT Advantage</span>
-                  <span className="ml-auto opacity-0 group-hover:opacity-100 transition-opacity">→</span>
                 </div>
               </motion.div>
             );
