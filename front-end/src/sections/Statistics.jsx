@@ -9,16 +9,13 @@ const stats = [
 
 export default function Statistics() {
   return (
-    <section className="py-16 lg:py-20 bg-charcoal-900" aria-label="Company statistics">
+    <section className="py-10 lg:py-12 bg-charcoal-900" aria-label="Company statistics">
       <div className="container-max section-padding">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 lg:gap-4">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-4">
           {stats.map((stat) => (
             <StatCard key={stat.label} {...stat} light />
           ))}
         </div>
-        <p className="text-center text-xs text-charcoal-600 mt-8">
-          * Placeholder values — replace with actual company statistics.
-        </p>
       </div>
     </section>
   );

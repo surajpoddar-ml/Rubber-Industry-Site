@@ -16,7 +16,7 @@ const processes = [
 
 export default function Quality() {
   return (
-    <section id="quality" className="py-20 lg:py-28 bg-white">
+    <section id="quality" className="py-10 lg:py-14 bg-white">
       <div className="container-max section-padding">
         <SectionHeader
           eyebrow="Quality Assurance"
@@ -25,52 +25,49 @@ export default function Quality() {
         />
 
         {/* QA Process Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-8">
           {processes.map((process, i) => (
             <motion.div
               key={process.title}
-              className="relative bg-charcoal-50 rounded-xl p-6 border border-charcoal-100 hover:border-forest-200 transition-colors"
-              initial={{ opacity: 0, y: 20 }}
+              className="relative bg-charcoal-50 rounded-xl p-4 border border-charcoal-100 hover:border-forest-200 transition-colors shadow-xs"
+              initial={{ opacity: 0, y: 15 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.4, delay: i * 0.08 }}
+              transition={{ duration: 0.4, delay: i * 0.06 }}
             >
-              <div className="w-11 h-11 rounded-lg bg-forest-100 text-forest-600 flex items-center justify-center mb-4">
-                <process.icon size={22} />
+              <div className="w-9 h-9 rounded-lg bg-forest-100 text-forest-600 flex items-center justify-center mb-3">
+                <process.icon size={18} />
               </div>
-              <h3 className="font-display text-base font-bold text-charcoal-900 mb-1.5">
+              <h3 className="font-display text-sm font-bold text-charcoal-900 mb-1">
                 {process.title}
               </h3>
-              <p className="text-sm text-charcoal-500 leading-relaxed">{process.desc}</p>
+              <p className="text-xs text-charcoal-500 leading-relaxed">{process.desc}</p>
             </motion.div>
           ))}
         </div>
 
         {/* Certifications */}
         <motion.div
-          className="bg-charcoal-900 rounded-2xl p-8 lg:p-12"
-          initial={{ opacity: 0, y: 20 }}
+          className="bg-charcoal-900 rounded-2xl p-5 lg:p-7 shadow-lg"
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
-          <div className="text-center mb-8">
-            <ShieldCheck size={32} className="text-forest-400 mx-auto mb-3" />
-            <h3 className="font-display text-2xl font-bold text-white mb-2">
+          <div className="text-center mb-5">
+            <ShieldCheck size={28} className="text-forest-400 mx-auto mb-2" />
+            <h3 className="font-display text-xl font-bold text-white">
               Standards & Certifications
             </h3>
-            <p className="text-charcoal-400 text-sm">
-              Placeholder — replace with actual certification details when available.
-            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             {certifications.map((cert) => (
               <div
                 key={cert.id}
-                className="bg-charcoal-800 rounded-xl p-5 text-center border border-charcoal-700"
+                className="bg-charcoal-800/90 rounded-xl p-3.5 text-center border border-charcoal-700/60"
               >
-                <Award size={28} className="text-forest-400 mx-auto mb-3" />
-                <p className="font-display font-bold text-white mb-1">{cert.name}</p>
+                <Award size={22} className="text-forest-400 mx-auto mb-2" />
+                <p className="font-display font-bold text-white text-sm mb-0.5">{cert.name}</p>
                 <p className="text-xs text-charcoal-400">{cert.label}</p>
               </div>
             ))}

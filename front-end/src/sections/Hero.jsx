@@ -40,7 +40,7 @@ export default function Hero() {
           >
             <span className="w-2 h-2 rounded-full bg-forest-400 animate-pulse" />
             <span className="text-forest-300 text-xs font-semibold tracking-widest uppercase">
-              Nepal Rubber Manufacturing
+              Nepal Rubber Tech
             </span>
           </motion.div>
 

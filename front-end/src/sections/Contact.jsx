@@ -63,42 +63,42 @@ const socialLinks = [
 
 export default function Contact() {
   return (
-    <section id="contact" className="py-10 lg:py-14 bg-charcoal-50">
+    <section id="contact" className="py-6 lg:py-8 bg-charcoal-50">
       <div className="container-max section-padding">
         <motion.div
-          className="text-center max-w-2xl mx-auto mb-8"
-          initial={{ opacity: 0, y: 20 }}
+          className="text-center max-w-2xl mx-auto mb-5"
+          initial={{ opacity: 0, y: 15 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.4 }}
         >
-          <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-forest-600 mb-1">
+          <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-forest-600 mb-0.5">
             Contact Us
           </span>
-          <h2 className="font-display text-2xl sm:text-3xl font-bold text-charcoal-900 leading-tight mb-2">
+          <h2 className="font-display text-xl sm:text-2xl font-bold text-charcoal-900 leading-tight mb-1">
             Get In Touch
           </h2>
-          <p className="text-charcoal-500 text-sm">
+          <p className="text-charcoal-500 text-xs sm:text-sm">
             Reach out to discuss your rubber product requirements or visit our facility.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
           {/* Contact Details */}
           <motion.div
-            className="space-y-3"
-            initial={{ opacity: 0, x: -20 }}
+            className="space-y-2.5"
+            initial={{ opacity: 0, x: -15 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.4 }}
           >
             {contactInfo.map((item) => (
               <div
                 key={item.title}
-                className="flex items-start gap-3 bg-white rounded-xl p-3.5 border border-charcoal-100 shadow-xs"
+                className="flex items-start gap-2.5 bg-white rounded-xl p-2.5 border border-charcoal-100 shadow-xs"
               >
-                <div className="w-9 h-9 rounded-lg bg-forest-50 text-forest-600 flex items-center justify-center shrink-0">
-                  <item.icon size={18} />
+                <div className="w-8 h-8 rounded-lg bg-forest-50 text-forest-600 flex items-center justify-center shrink-0">
+                  <item.icon size={16} />
                 </div>
                 <div>
                   <h3 className="font-display text-xs font-bold text-charcoal-900 mb-0.5">
@@ -120,7 +120,7 @@ export default function Contact() {
             ))}
 
             {/* Social Links */}
-            <div className="bg-white rounded-xl p-3.5 border border-charcoal-100 shadow-xs flex items-center justify-between">
+            <div className="bg-white rounded-xl p-2.5 border border-charcoal-100 shadow-xs flex items-center justify-between">
               <h3 className="font-display text-xs font-bold text-charcoal-900">
                 Follow Us
               </h3>
@@ -130,9 +130,9 @@ export default function Contact() {
                     key={s.label}
                     href={s.href}
                     aria-label={s.label}
-                    className="w-8 h-8 rounded-lg bg-charcoal-50 hover:bg-forest-600 flex items-center justify-center text-charcoal-500 hover:text-white transition-colors"
+                    className="w-7 h-7 rounded-lg bg-charcoal-50 hover:bg-forest-600 flex items-center justify-center text-charcoal-500 hover:text-white transition-colors"
                   >
-                    <s.icon size={16} />
+                    <s.icon size={14} />
                   </a>
                 ))}
               </div>
@@ -141,18 +141,18 @@ export default function Contact() {
 
           {/* Real Google Map Navigation */}
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: 15 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
+            transition={{ duration: 0.4 }}
           >
-            <div className="h-full min-h-[320px] bg-charcoal-200 rounded-2xl overflow-hidden shadow-md border border-charcoal-200 relative">
+            <div className="h-full min-h-[250px] bg-charcoal-200 rounded-xl overflow-hidden shadow-md border border-charcoal-200 relative">
               <iframe
                 title="Nepal Rubber Tech Location Map"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14130.857353982464!2d85.31232925!3d27.70896035!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39eb198a307baabf%3A0xb5137c1565540167!2sKathmandu%2044600%2C%20Nepal!5e0!2m3!1m2!1sen!2snp!4v1700000000000!5m2!1sen!2snp"
                 width="100%"
                 height="100%"
-                style={{ border: 0, minHeight: '320px' }}
+                style={{ border: 0, minHeight: '250px' }}
                 allowFullScreen=""
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"

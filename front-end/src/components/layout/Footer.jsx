@@ -143,8 +143,6 @@ export default function Footer() {
                 <MapPin size={16} className="text-forest-500 mt-0.5 shrink-0" />
                 <span className="text-charcoal-400">
                   Kathmandu, Nepal
-                  <br />
-                  <span className="text-charcoal-500">(Office Address Placeholder)</span>
                 </span>
               </li>
               <li className="flex items-start gap-3 text-sm">
