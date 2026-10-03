@@ -1,6 +1,5 @@
 import { motion } from 'framer-motion';
 import SectionHeader from '../components/common/SectionHeader';
-import { Factory, Gauge, Settings } from 'lucide-react';
 
 const steps = [
   {
@@ -35,12 +34,6 @@ const steps = [
   },
 ];
 
-const capabilities = [
-  { icon: Factory, label: 'Manufacturing Area', value: 'Placeholder', note: '(Replace with actual)' },
-  { icon: Settings, label: 'Production Lines', value: 'Placeholder', note: '(Replace with actual)' },
-  { icon: Gauge, label: 'Monthly Capacity', value: 'Placeholder', note: '(Replace with actual)' },
-];
-
 export default function Manufacturing() {
   return (
     <section id="manufacturing" className="py-20 lg:py-28 bg-charcoal-50">
@@ -52,7 +45,7 @@ export default function Manufacturing() {
         />
 
         {/* Timeline - Desktop: Horizontal, Mobile: Vertical */}
-        <div className="mb-20">
+        <div>
           {/* Desktop horizontal timeline */}
           <div className="hidden lg:block">
             <div className="relative">
@@ -119,29 +112,6 @@ export default function Manufacturing() {
             </div>
           </div>
         </div>
-
-        {/* Manufacturing Capabilities */}
-        <motion.div
-          className="bg-white rounded-2xl border border-charcoal-100 p-8 lg:p-10"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-        >
-          <h3 className="font-display text-2xl font-bold text-charcoal-900 mb-6 text-center">
-            Manufacturing Capabilities
-          </h3>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {capabilities.map((cap) => (
-              <div key={cap.label} className="text-center p-4">
-                <cap.icon size={32} className="text-forest-600 mx-auto mb-3" />
-                <p className="text-sm font-medium text-charcoal-500 mb-1">{cap.label}</p>
-                <p className="font-display text-xl font-bold text-charcoal-900">{cap.value}</p>
-                <p className="text-xs text-charcoal-400 mt-1">{cap.note}</p>
-              </div>
-            ))}
-          </div>
-        </motion.div>
       </div>
     </section>
   );

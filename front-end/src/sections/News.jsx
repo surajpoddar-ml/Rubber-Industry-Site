@@ -8,15 +8,18 @@ export default function News() {
   const [selectedArticle, setSelectedArticle] = useState(null);
 
   return (
-    <section id="news" className="py-20 lg:py-28 bg-charcoal-50">
+    <section id="news" className="py-10 lg:py-14 bg-charcoal-50">
       <div className="container-max section-padding">
-        <SectionHeader
-          eyebrow="News & Insights"
-          title="Latest Updates"
-          description="Stay informed about company developments, industry insights, and manufacturing updates."
-        />
+        <div className="text-center max-w-2xl mx-auto mb-6">
+          <span className="inline-block text-xs font-bold tracking-[0.2em] uppercase text-forest-600 mb-1">
+            News & Insights
+          </span>
+          <h2 className="font-display text-2xl sm:text-3xl font-bold text-charcoal-900 leading-tight">
+            Latest Updates
+          </h2>
+        </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {news.map((article, index) => (
             <NewsCard
               key={article.id}

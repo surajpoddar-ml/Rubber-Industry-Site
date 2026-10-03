@@ -27,13 +27,6 @@ export default function About() {
                 className="w-full h-full object-cover"
               />
             </div>
-            {/* Accent block */}
-            <div className="absolute -bottom-6 -right-6 w-36 h-36 bg-rust-600 rounded-xl hidden lg:flex items-center justify-center shadow-lg">
-              <div className="text-center text-white">
-                <div className="font-display text-3xl font-bold">NRT</div>
-                <div className="text-xs uppercase tracking-wider mt-1 font-semibold">Nepal</div>
-              </div>
-            </div>
           </motion.div>
 
           {/* Right: Content */}
